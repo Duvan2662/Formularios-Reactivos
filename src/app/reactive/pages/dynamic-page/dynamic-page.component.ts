@@ -58,6 +58,9 @@ export class DynamicPageComponent {
   }
 
 
+  public onDeleteFavorite = (index: number):void => {
+    this.favoriteGames.removeAt(index);
+  }
 
 
   public onSubmit = ():void => {
