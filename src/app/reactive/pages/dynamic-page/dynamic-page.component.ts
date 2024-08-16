@@ -28,6 +28,38 @@ export class DynamicPageComponent {
   }
 
 
+
+  public isValidField = (field:string):boolean | null => {
+    return this.myForm.controls[field].errors && this.myForm.controls[field].touched
+  }
+
+  public isValidFieldInArray = (formArray:FormArray, index: number):boolean | null => {
+    return formArray.controls[index].errors && formArray.controls[index].touched
+  }
+
+  public getFieldError = (field:string): string | null  => {
+
+    if ( !this.myForm.contains(field) ) {
+      return null
+    }
+
+    const errors = this.myForm.controls[field].errors || {};
+    for (const key of Object.keys(errors)) {
+      switch (key) {
+        case 'required':
+          return 'Este campo es requerido';
+        case 'minlength':
+          return `Minimo debe tener ${errors['minlength'].requiredLength} caracteres `
+      }
+    }
+
+    return null;
+
+  }
+
+
+
+
   public onSubmit = ():void => {
     if (this.myForm.invalid) {
       this.myForm.markAllAsTouched();
