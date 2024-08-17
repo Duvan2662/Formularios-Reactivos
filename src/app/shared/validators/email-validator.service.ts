@@ -8,7 +8,7 @@ import { delay, map, Observable, of } from 'rxjs';
 
 export class EmailValidatorService implements AsyncValidator{
 
-  validate(control: AbstractControl): Observable<ValidationErrors | null> {
+  public validate = (control: AbstractControl): Observable<ValidationErrors | null>  =>{
 
     const email = control.value;
     console.log({email});
