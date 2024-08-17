@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { cantBeStrider, emailPattern, firstNameAndLastnamePattern } from '../../../shared/validators/validators';
+// import { cantBeStrider, emailPattern, firstNameAndLastnamePattern } from '../../../shared/validators/validators';
+import { ValidatorsService } from '../../../shared/services/validators.service';
 
 @Component({
   selector: 'app-register-page',
@@ -10,20 +11,22 @@ import { cantBeStrider, emailPattern, firstNameAndLastnamePattern } from '../../
 export class RegisterPageComponent {
 
   public myform: FormGroup = this.fb.group({
-    name:['',[Validators.required, Validators.pattern(firstNameAndLastnamePattern)]],
-    email:['',[Validators.required, Validators.pattern(emailPattern)]],
-    username:['',[Validators.required,cantBeStrider]],
+    name:['',[Validators.required, Validators.pattern(this.validatorService.firstNameAndLastnamePattern)]],
+    email:['',[Validators.required, Validators.pattern(this.validatorService.emailPattern)]],
+    username:['',[Validators.required,this.validatorService.cantBeStrider]],
     password:['',[Validators.required, Validators.minLength(6)]],
     password2: ['',[Validators.required]]
   });
 
 
-  constructor(private fb:FormBuilder) {}
+  constructor(
+    private fb:FormBuilder,
+    private validatorService: ValidatorsService
+  ) {}
 
   public isValidField = (field:string) => {
-    //TODO:Obtener validacion desde un servicio
+    return this.validatorService.isValidField(this.myform,field)
   }
-
   public onSubmit = () => {
     this.myform.markAllAsTouched();
   }
