@@ -1,3 +1,22 @@
+# Informacion 
+Este aplicativo tiene como fin aprender mas sobre los formularios reactivos en Angular desde los basicos, los dinamicos, los switchs y los formularios.  La pagina web queda desplegada en mi repositorio por si lo desean ver funcionando. utilizo GitHubPages
+
+
+
+# Basicos
+![1](https://github.com/user-attachments/assets/26993c82-326b-4cc9-9954-ad8b6822a94b)
+
+# Dinamicos
+![2](https://github.com/user-attachments/assets/b5fad2d0-9e68-4d7f-88d2-60fb550c5932)
+
+# switches
+![3](https://github.com/user-attachments/assets/cb881bf7-b813-472e-906a-9ba915c87fb5)
+
+# Formularios
+![4](https://github.com/user-attachments/assets/9fd0f2e6-2076-47e7-8603-e6d980f8b7f1)
+
+
+
 # FormulariosReactivosApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
@@ -6,22 +25,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
