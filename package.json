@@ -8,9 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run delete:dist",
-    "delete:docs": "if exist docs (rd /s /q docs)",
     "delete:dist": "rd /s /q dist",
-    "copy:dist": "copyfiles dist/formularios-reactivos-app/** ./docs -f"
+    "build:href": "ng build --base-href ./",
+    "copy:dist": "copyfiles dist/formularios-reactivos-app/** ./docs -f",
+    "delete:docs": "if exist docs (rd /s /q docs)"
   },
   "private": true,
   "dependencies": {
